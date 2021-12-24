@@ -1,0 +1,9 @@
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\bin\Debug\netcoreapp3.1\Sales.Entities.Product.deps.json
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\bin\Debug\netcoreapp3.1\Sales.Entities.Product.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\bin\Debug\netcoreapp3.1\Sales.Entities.Product.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\obj\Debug\netcoreapp3.1\Sales.Entities.Product.csprojAssemblyReference.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\obj\Debug\netcoreapp3.1\Sales.Entities.Product.AssemblyInfoInputs.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\obj\Debug\netcoreapp3.1\Sales.Entities.Product.AssemblyInfo.cs
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\obj\Debug\netcoreapp3.1\Sales.Entities.Product.csproj.CoreCompileInputs.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\obj\Debug\netcoreapp3.1\Sales.Entities.Product.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\Product\obj\Debug\netcoreapp3.1\Sales.Entities.Product.pdb
