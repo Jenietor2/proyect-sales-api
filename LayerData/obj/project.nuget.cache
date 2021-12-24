@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bZ1ilxlMhaeGYwiHw37E5rHCgai8pl7UXOLOuIa4hqEdDvtSqxmFa5MomWKFZs0I+VwYDoN7XQc+gxqb2kmr/w==",
+  "dgSpecHash": "DS9kJnKJHBeAnWqJMcGJmfUMpC0Xu0KCBZDXi8gpgbcLCHtw//3yU9u20k0WWsyFMtp7KZI1zuWiMm8c2BqECQ==",
   "success": true,
-  "projectFilePath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj",
+  "projectFilePath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
-    "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\6.0.0\\microsoft.extensions.options.configurationextensions.6.0.0.nupkg.sha512",
     "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\EDUARD\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

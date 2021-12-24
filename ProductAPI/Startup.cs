@@ -1,4 +1,3 @@
-using Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +6,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Sales.Entity;
+using Sales.Entity.Customer;
+using Sales.Repository.Concrete;
+using Sales.Repository.Contract;
+using Sales.Repository.Interfaces;
+using Sales.Repository.SqlServer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +32,8 @@ namespace ProductAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.Configure<ConfigurationManager>(Configuration.GetSection("ConfigurationManager"));
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,59 +14,6 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
-        }
-      },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
-      "Microsoft.Extensions.Options/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
-        }
-      },
       "Microsoft.Extensions.Primitives/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -223,19 +170,33 @@
           }
         }
       },
-      "Sales.Data.Product/1.0.0": {
+      "Sales.Business/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
+          "Sales.Data": "1.0.0",
+          "Sales.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sales.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sales.Business.dll": {}
+        }
+      },
+      "Sales.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Sales.Entity": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
-          "bin/placeholder/Sales.Data.Product.dll": {}
+          "bin/placeholder/Sales.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Sales.Data.Product.dll": {}
+          "bin/placeholder/Sales.Data.dll": {}
         }
       },
       "Sales.Entity/1.0.0": {
@@ -246,6 +207,21 @@
         },
         "runtime": {
           "bin/placeholder/Sales.Entity.dll": {}
+        }
+      },
+      "Sales.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Sales.Business": "1.0.0",
+          "Sales.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sales.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sales.Repository.dll": {}
         }
       }
     }
@@ -267,90 +243,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Configuration.Binder/6.0.0": {
-      "sha512": "b3ErKzND8LIC7o08QAVlKfaEIYEvLJbtmVbFZVBRXeu9YkKfSSzLZfR1SUfQPBIy9mKLhEtJgGYImkcMNaKE0A==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.binder/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/net461/Microsoft.Extensions.Configuration.Binder.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
-        "microsoft.extensions.configuration.binder.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
-      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
-      "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Options/6.0.0": {
-      "sha512": "dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ==",
-      "type": "package",
-      "path": "microsoft.extensions.options/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Options.dll",
-        "lib/net461/Microsoft.Extensions.Options.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.6.0.0.nupkg.sha512",
-        "microsoft.extensions.options.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
-      "sha512": "bXWINbTn0vC0FYc9GaQTISbxhQLAMrvtbuvD9N6JelEaIS/Pr62wUCinrq5bf1WRBGczt1v4wDhxFtVFNcMdUQ==",
-      "type": "package",
-      "path": "microsoft.extensions.options.configurationextensions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "lib/net461/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
-        "microsoft.extensions.options.configurationextensions.6.0.0.nupkg.sha512",
-        "microsoft.extensions.options.configurationextensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -717,21 +609,31 @@
         "version.txt"
       ]
     },
-    "Sales.Data.Product/1.0.0": {
+    "Sales.Business/1.0.0": {
       "type": "project",
-      "path": "../LayerData/Sales.Data.Product.csproj",
-      "msbuildProject": "../LayerData/Sales.Data.Product.csproj"
+      "path": "../Sales.Business/Sales.Business.csproj",
+      "msbuildProject": "../Sales.Business/Sales.Business.csproj"
+    },
+    "Sales.Data/1.0.0": {
+      "type": "project",
+      "path": "../LayerData/Sales.Data.csproj",
+      "msbuildProject": "../LayerData/Sales.Data.csproj"
     },
     "Sales.Entity/1.0.0": {
       "type": "project",
       "path": "../Common/Sales.Entity.csproj",
       "msbuildProject": "../Common/Sales.Entity.csproj"
+    },
+    "Sales.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Sales.Repository.SqlServer/Sales.Repository.csproj",
+      "msbuildProject": "../Sales.Repository.SqlServer/Sales.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Sales.Data.Product >= 1.0.0",
       "Sales.Entity >= 1.0.0",
+      "Sales.Repository >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -741,9 +643,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\ProductAPI\\ProductAPI.csproj",
-      "projectName": "ProductAPI",
-      "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\ProductAPI\\ProductAPI.csproj",
+      "projectUniqueName": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\ProductAPI\\Sales.API.csproj",
+      "projectName": "Sales.API",
+      "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\ProductAPI\\Sales.API.csproj",
       "packagesPath": "C:\\Users\\EDUARD\\.nuget\\packages\\",
       "outputPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\ProductAPI\\obj\\",
       "projectStyle": "PackageReference",
@@ -765,8 +667,8 @@
             "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Common\\Sales.Entity.csproj": {
               "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Common\\Sales.Entity.csproj"
             },
-            "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj": {
-              "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj"
+            "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Sales.Repository.SqlServer\\Sales.Repository.csproj": {
+              "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Sales.Repository.SqlServer\\Sales.Repository.csproj"
             }
           }
         }

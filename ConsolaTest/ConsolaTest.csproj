@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LayerData\Sales.Data.Product.csproj" />
+    <ProjectReference Include="..\LayerData\Sales.Data.csproj" />
   </ItemGroup>
 
 </Project>

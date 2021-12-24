@@ -1,0 +1,16 @@
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\UnitOfWork.Interfaces.deps.json
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\UnitOfWork.Interfaces.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\UnitOfWork.Interfaces.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\Sales.Entity.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\Sales.Repository.Interfaces.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\Sales.Repository.SqlServer.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\Sales.Repository.Interfaces.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\Sales.Repository.SqlServer.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\bin\Debug\netcoreapp3.1\Sales.Entity.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.csprojAssemblyReference.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.AssemblyInfoInputs.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.AssemblyInfo.cs
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.csproj.CoreCompileInputs.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.csproj.CopyComplete
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\UnitOfWork.Interfaces\obj\Debug\netcoreapp3.1\UnitOfWork.Interfaces.pdb

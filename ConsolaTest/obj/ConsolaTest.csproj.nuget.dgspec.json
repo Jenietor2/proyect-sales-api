@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj": {
-                "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj"
+              "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.csproj": {
+                "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.csproj"
               }
             }
           }
@@ -128,12 +128,12 @@
         }
       }
     },
-    "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj": {
+    "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj",
-        "projectName": "Sales.Data.Product",
-        "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.Product.csproj",
+        "projectUniqueName": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.csproj",
+        "projectName": "Sales.Data",
+        "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\Sales.Data.csproj",
         "packagesPath": "C:\\Users\\EDUARD\\.nuget\\packages\\",
         "outputPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\LayerData\\obj\\",
         "projectStyle": "PackageReference",
@@ -168,7 +168,7 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
             },

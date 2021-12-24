@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Sales.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Sales.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sales.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sales.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Common/Sales.Entity.csproj",
+      "msbuildProject": "../Common/Sales.Entity.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Sales.Entity >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\EDUARD\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Sales.Repository.Interfaces\\Sales.Repository.Interfaces.csproj",
+      "projectName": "Sales.Repository.Interfaces",
+      "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Sales.Repository.Interfaces\\Sales.Repository.Interfaces.csproj",
+      "packagesPath": "C:\\Users\\EDUARD\\.nuget\\packages\\",
+      "outputPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Sales.Repository.Interfaces\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\EDUARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Common\\Sales.Entity.csproj": {
+              "projectPath": "E:\\prueba-tecnica-sophos\\repositorio\\Ventas\\Common\\Sales.Entity.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

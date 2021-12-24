@@ -1,0 +1,14 @@
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Repository.SqlServer.deps.json
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Repository.SqlServer.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Repository.SqlServer.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Entity.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Repository.Interfaces.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Repository.Interfaces.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\bin\Debug\netcoreapp3.1\Sales.Entity.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.csprojAssemblyReference.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.AssemblyInfoInputs.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.AssemblyInfo.cs
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.csproj.CoreCompileInputs.cache
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.csproj.CopyComplete
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\Sales.Repository.SqlServer\obj\Debug\netcoreapp3.1\Sales.Repository.SqlServer.pdb

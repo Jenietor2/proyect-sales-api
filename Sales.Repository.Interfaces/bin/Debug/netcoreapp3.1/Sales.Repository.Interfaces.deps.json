@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Sales.Repository.Interfaces/1.0.0": {
+        "dependencies": {
+          "Sales.Entity": "1.0.0"
+        },
+        "runtime": {
+          "Sales.Repository.Interfaces.dll": {}
+        }
+      },
+      "Sales.Entity/1.0.0": {
+        "runtime": {
+          "Sales.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sales.Repository.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sales.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

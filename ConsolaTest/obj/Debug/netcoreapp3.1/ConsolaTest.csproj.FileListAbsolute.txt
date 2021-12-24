@@ -5,10 +5,6 @@ E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\ConsolaTest.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\ConsolaTest.pdb
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
-E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
@@ -17,9 +13,9 @@ E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Sales.Data.Product.dll
+E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Sales.Data.dll
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Sales.Entity.dll
-E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Sales.Data.Product.pdb
+E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Sales.Data.pdb
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\bin\Debug\netcoreapp3.1\Sales.Entity.pdb
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\obj\Debug\netcoreapp3.1\ConsolaTest.csprojAssemblyReference.cache
 E:\prueba-tecnica-sophos\repositorio\Ventas\ConsolaTest\obj\Debug\netcoreapp3.1\ConsolaTest.AssemblyInfoInputs.cache

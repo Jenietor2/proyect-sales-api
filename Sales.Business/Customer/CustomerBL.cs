@@ -1,0 +1,43 @@
+﻿using Microsoft.Extensions.Configuration;
+using Sales.Data.Customer;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Sales.Business.Customer
+{
+    public class CustomerBL
+    {
+        private readonly CustomerDAL customerDAL;
+        private readonly IConfiguration _configuration;
+
+        public CustomerBL(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            customerDAL = new CustomerDAL(_configuration);
+        }
+
+        public List<Sales.Entity.Customer.Customer> GetAllCustomers()
+        {
+            return customerDAL.GetAll();
+        }
+
+        public Sales.Entity.Customer.Customer GetCustomerById(Guid id)
+        {
+            return customerDAL.GetById(id);
+        }
+        public Guid CreateCustomer(Object customer)
+        {
+            return customerDAL.Create((Sales.Entity.Customer.Customer)customer);
+        }
+
+        public bool UpdateCustomer(Object customer)
+        {
+            return customerDAL.Update((Sales.Entity.Customer.Customer)customer);
+        }
+        public bool DeleteCustomer(Guid id)
+        {
+            return customerDAL.Delete(id);
+        }
+    }
+}

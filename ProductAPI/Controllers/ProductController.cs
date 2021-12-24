@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Sales.Data.Product;
+using Microsoft.Extensions.Configuration;
 using Sales.Entity;
+using Sales.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,14 @@ namespace ProductAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private readonly IProductRepository _productRespository;
+        private readonly IConfiguration _configuration;
+        public ProductController(IProductRepository productRepository, IConfiguration configuration)
+        {
+            _productRespository = productRepository;
+            _configuration = configuration;
+        }
+
         [HttpPost]
         public IActionResult InsertProduct([FromBody] Product product)
         {
@@ -21,27 +30,24 @@ namespace ProductAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            ProductDAL productDAL = new ProductDAL();
-
-            productDAL.InsertProduct(product);
-            return StatusCode(200);
+            return Ok(_productRespository.Create(product));
         }
 
         [HttpGet]
         public IActionResult GetAllProducts()
         {
-            ProductDAL productDAL = new ProductDAL();
+            
 
-            List<Product> productList = productDAL.GetProducts();
+            List<Product> productList = _productRespository.GetAll().ToList();
             return Ok(productList);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetProductById(Guid id)
         {
-            ProductDAL productDAL = new ProductDAL();
+            
 
-            Product product = productDAL.GetProductById(id);
+            Product product = _productRespository.GetId(id);
 
             return Ok(product);
         }
@@ -49,9 +55,8 @@ namespace ProductAPI.Controllers
         [HttpPut]
         public IActionResult UpdateProduct([FromBody] Product product)
         {
-            ProductDAL productDAL = new ProductDAL();
             
-            if (productDAL.UpdateProduct(product))
+            if (_productRespository.Update(product))
             {
                 return Ok("Actualización satisfactoria");
             }
@@ -62,9 +67,9 @@ namespace ProductAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(Guid id)
         {
-            ProductDAL productDAL = new ProductDAL();
+            
 
-            if (productDAL.DeleteProductById(id))
+            if (_productRespository.Delete(id))
             {
                 return Ok("Producto eliminado");
             }
