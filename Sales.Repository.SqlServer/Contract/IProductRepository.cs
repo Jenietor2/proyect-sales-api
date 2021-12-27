@@ -9,8 +9,8 @@ namespace Sales.Repository.Interfaces
     {
         List<Product> GetAll();
         Product GetId(Guid id);
-        Guid Create(Product product);
-        bool Update(Product product);
+        Product Create(Product product);
+        Product Update(Product product);
         bool Delete(Guid id);
     }
 }

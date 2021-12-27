@@ -1,4 +1,6 @@
-﻿using Sales.Entity.Sale;
+﻿using Microsoft.Extensions.Configuration;
+using Sales.Business.Sale;
+using Sales.Entity.Sale;
 using Sales.Repository.Contract;
 using System;
 using System.Collections.Generic;
@@ -8,19 +10,37 @@ namespace Sales.Repository.Concrete
 {
     public class SaleRepository : ISaleRepository
     {
-        public bool Create(List<Sale> salesList)
+        private readonly IConfiguration _configuration;
+        private readonly SaleBL _saleBL;
+        public SaleRepository(IConfiguration configuration)
         {
-            throw new NotImplementedException();
+            _configuration = configuration;
+            _saleBL = new SaleBL(_configuration);
+        }
+        public bool Create(Sale sales)
+        {
+            try
+            {
+                return _saleBL.CreateSale(sales);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
-        public List<Sale> GetAll()
+        public Sale GetById(Guid id)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                return _saleBL.GetSalesByCustomerId(id);
+            }
+            catch (Exception ex)
+            {
 
-        public List<Sale> GetById(Guid id)
-        {
-            throw new NotImplementedException();
+                throw;
+            }
         }
     }
 }

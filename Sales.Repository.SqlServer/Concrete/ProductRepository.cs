@@ -21,7 +21,7 @@ namespace Sales.Repository.SqlServer.Concrete
             _productBL = new ProductBL(_configuration);
         }
 
-        public Guid Create(Product product)
+        public Entity.Product Create(Product product)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace Sales.Repository.SqlServer.Concrete
             }
         }
 
-        public bool Update(Product product)
+        public Product Update(Product product)
         {
             try
             {

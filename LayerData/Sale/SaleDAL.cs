@@ -18,56 +18,59 @@ namespace Sales.Data.Sale
             connectionString = _configuration.GetSection("ConnectionStrings:DefaultConnection").Value;
 
         }
-        public List<Entity.Sale.Sale> GetSales()
+        //public Entity.Sale.Sale GetSales()
+        //{
+        //    try
+        //    {
+        //        Entity.Sale.Sale sale = new Entity.Sale.Sale();
+        //        List<Entity.Sale.SaleLine> saleLines = new List<Entity.Sale.SaleLine>();
+        //        using (SqlConnection context = new SqlConnection(connectionString))
+        //        {
+        //            context.Open();
+
+        //            using (SqlCommand command = context.CreateCommand())
+        //            {
+        //                command.CommandType = CommandType.StoredProcedure;
+        //                command.CommandText = "[dbo].[stpGetSales]";
+
+        //                using (SqlDataReader reader = command.ExecuteReader())
+        //                {
+        //                    if (reader.HasRows)
+        //                    {
+        //                        while (reader.Read())
+        //                        {
+        //                            Entity.Sale.SaleLine salesLine = new Entity.Sale.SaleLine();
+
+        //                            sale.Id = (Guid)reader["id_sale"];
+        //                            salesLine.IdProduct = (Guid)reader["id_product"];
+        //                            salesLine.IdCustomer = (Guid)reader["id_customer"];
+        //                            salesLine.Quantity = reader["quantity"] as int? ?? default(int);
+        //                            salesLine.UnitValue = reader["unit_value_product"] as decimal? ?? default(decimal);
+        //                            salesLine.TotalValueForLine = reader["total_value_for_line"] as decimal? ?? default(decimal);
+        //                            sale.TotalValue = reader["total_value"] as decimal? ?? default(decimal);
+
+        //                            saleLines.Add(salesLine);
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        sale.SaleLines = saleLines;
+        //        return sale;
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw;
+        //    }
+        //}
+
+        public Entity.Sale.Sale GetSaleByCustomerId(Guid prmId)
         {
             try
             {
-                List<Entity.Sale.Sale> salesList = new List<Entity.Sale.Sale>();
-
-                using (SqlConnection context = new SqlConnection(connectionString))
-                {
-                    context.Open();
-
-                    using (SqlCommand command = context.CreateCommand())
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.CommandText = "[dbo].[stpGetSales]";
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                while (reader.Read())
-                                {
-                                    Entity.Sale.Sale sale = new Entity.Sale.Sale();
-
-                                    sale.Id = (Guid)reader["id_sale"];
-                                    sale.IdProduct = (Guid)reader["id_product"];
-                                    sale.IdCustomer = (Guid)reader["id_customer"];
-                                    sale.Quantity = reader["quantity"] as int? ?? default(int);
-                                    sale.UnitValue = reader["unit_value_product"] as decimal? ?? default(decimal);
-                                    sale.TotalValue = reader["total_value"] as decimal? ?? default(decimal);
-
-                                    salesList.Add(sale);
-                                }
-                            }
-                        }
-                    }
-                }
-                return salesList;
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
-        }
-
-        public List<Entity.Sale.Sale> GetSaleByCustomerId(Guid prmId)
-        {
-            try
-            {
-                List<Entity.Sale.Sale> saleList = new List<Entity.Sale.Sale>();
+                Entity.Sale.Sale sale = new Entity.Sale.Sale();
+                List<Entity.Sale.SaleLine> saleLines = new List<Entity.Sale.SaleLine>();
 
                 using (var context = new SqlConnection(connectionString))
                 {
@@ -84,21 +87,24 @@ namespace Sales.Data.Sale
                             {
                                 while (reader.Read())
                                 {
-                                    Entity.Sale.Sale sale = new Entity.Sale.Sale();
+                                    Entity.Sale.SaleLine salesLine = new Entity.Sale.SaleLine();
+
                                     sale.Id = (Guid)reader["id_sale"];
-                                    sale.IdProduct = (Guid)reader["id_product"];
-                                    sale.IdCustomer = prmId;
-                                    sale.Quantity = reader["quantity"] as int? ?? default(int);
-                                    sale.UnitValue = reader["unit_value_product"] as decimal? ?? default(decimal);
+                                    salesLine.IdProduct = (Guid)reader["id_product"];
+                                    salesLine.IdCustomer = prmId;
+                                    salesLine.Quantity = reader["quantity"] as int? ?? default(int);
+                                    salesLine.UnitValue = reader["unit_value_product"] as decimal? ?? default(decimal);
+                                    salesLine.TotalValueForLine = reader["total_value_for_line"] as decimal? ?? default(decimal);
                                     sale.TotalValue = reader["total_value"] as decimal? ?? default(decimal);
 
-                                    saleList.Add(sale);
+                                    saleLines.Add(salesLine);
                                 }
                             }
                         }
                     }
                 }
-                return saleList;
+                sale.SaleLines = saleLines;
+                return sale;
             }
             catch (Exception ex)
             {
@@ -111,7 +117,7 @@ namespace Sales.Data.Sale
         /// </summary>
         /// <param name="prmProduct"></param>
         /// <returns></returns>
-        public bool InsertSales(DataTable salesDT)
+        public bool InsertSales(Guid saleId,DataTable salesDT, decimal saleTotalValue)
         {
             try
             {
@@ -122,8 +128,9 @@ namespace Sales.Data.Sale
                     using (SqlCommand command = new SqlCommand("[dbo].[stpInsertSales]", context))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-
+                        command.Parameters.Add(new SqlParameter { ParameterName = "@prmSaleId", SqlDbType = SqlDbType.UniqueIdentifier, Value = saleId });
                         command.Parameters.Add(new SqlParameter { ParameterName = "@prmSalesLines", SqlDbType = SqlDbType.Structured, Value = salesDT });
+                        command.Parameters.Add(new SqlParameter { ParameterName = "@prmTotalValue", SqlDbType = SqlDbType.Decimal, Value = saleTotalValue });
 
                         command.ExecuteScalar();
 

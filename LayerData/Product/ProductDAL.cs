@@ -41,8 +41,8 @@ namespace Sales.Data.Product
                                 while (reader.Read())
                                 {
                                     product.Id = prmId;
-                                    product.Name = reader["nombre_producto"] as string;
-                                    product.UnitValue = reader["valor_unitario_producto"] as decimal? ?? default(decimal);
+                                    product.Name = reader["name_product"] as string;
+                                    product.UnitValue = reader["unit_value_product"] as decimal? ?? default(decimal);
                                 }
                             }
                         }
@@ -83,9 +83,9 @@ namespace Sales.Data.Product
                                 {
                                     Entity.Product product = new Entity.Product();
 
-                                    product.Id = (Guid)reader["id_producto"];
-                                    product.Name = reader["nombre_producto"] as string;
-                                    product.UnitValue = reader["valor_unitario_producto"] as decimal? ?? default(decimal);
+                                    product.Id = (Guid)reader["id_product"];
+                                    product.Name = reader["name_product"] as string;
+                                    product.UnitValue = reader["unit_value_product"] as decimal? ?? default(decimal);
 
                                     productsList.Add(product);
                                 }
@@ -145,7 +145,7 @@ namespace Sales.Data.Product
                 {
                     cnnProduct.Open();
 
-                    using (SqlCommand command = new SqlCommand("[dbo].[stpUpdateProductd]", cnnProduct))
+                    using (SqlCommand command = new SqlCommand("[dbo].[stpUpdateProduct]", cnnProduct))
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add(new SqlParameter { ParameterName = "@prmIdProduct", SqlDbType = SqlDbType.UniqueIdentifier, Value = prmProduct.Id });

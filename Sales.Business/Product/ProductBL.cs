@@ -26,14 +26,17 @@ namespace Sales.Business.Product
         {
             return productDAL.GetProductById(id);
         }
-        public Guid CreateProduct(Object product)
+        public Sales.Entity.Product CreateProduct(Sales.Entity.Product product)
         {
-            return productDAL.InsertProduct((Sales.Entity.Product)product);
+            Guid id = productDAL.InsertProduct(product);
+            return GetProductById(id);
         }
 
-        public bool UpdateProduct(Object product)
+        public Sales.Entity.Product UpdateProduct(Sales.Entity.Product product)
         {
-            return productDAL.UpdateProduct((Sales.Entity.Product)product);
+           productDAL.UpdateProduct(product);
+           
+            return GetProductById(product.Id);
         }
         public bool DeleteProduct(Guid id)
         {

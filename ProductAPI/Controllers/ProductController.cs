@@ -36,7 +36,7 @@ namespace ProductAPI.Controllers
         [HttpGet]
         public IActionResult GetAllProducts()
         {
-            
+
 
             List<Product> productList = _productRespository.GetAll().ToList();
             return Ok(productList);
@@ -45,7 +45,7 @@ namespace ProductAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetProductById(Guid id)
         {
-            
+
 
             Product product = _productRespository.GetId(id);
 
@@ -55,19 +55,13 @@ namespace ProductAPI.Controllers
         [HttpPut]
         public IActionResult UpdateProduct([FromBody] Product product)
         {
-            
-            if (_productRespository.Update(product))
-            {
-                return Ok("Actualización satisfactoria");
-            }
-
-            return NotFound("Producto no encontrado");
+            return Ok(_productRespository.Update(product));
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(Guid id)
         {
-            
+
 
             if (_productRespository.Delete(id))
             {
