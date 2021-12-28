@@ -142,7 +142,7 @@ namespace Sales.Data.Customer
         /// </summary>
         /// <param name="prmProduct"></param>
         /// <returns></returns>
-        public bool Update(Entity.Customer.Customer customer)
+        public Guid Update(Entity.Customer.Customer customer)
         {
             try
             {
@@ -162,7 +162,7 @@ namespace Sales.Data.Customer
                         command.ExecuteNonQuery();
                     }
                 }
-                return true;
+                return customer.Id;
             }
             catch (Exception)
             {

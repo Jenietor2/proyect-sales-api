@@ -71,7 +71,7 @@ namespace Sales.Repository.Concrete
             }
         }
 
-        public bool Update(Customer customer)
+        public Customer Update(Customer customer)
         {
             try
             {

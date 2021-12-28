@@ -55,13 +55,7 @@ namespace ProductAPI.Controllers
         [HttpPut]
         public IActionResult UpdateProduct([FromBody] Customer customer)
         {
-
-            if (_customerRespository.Update(customer))
-            {
-                return Ok("Actualización satisfactoria");
-            }
-
-            return NotFound("Cliente no encontrado");
+            return Ok(_customerRespository.Update(customer));
         }
 
         [HttpDelete("{id}")]
@@ -71,9 +65,9 @@ namespace ProductAPI.Controllers
 
             if (_customerRespository.Delete(id))
             {
-                return Ok("Cliente eliminado");
+                return Ok();
             }
-            return NotFound("Cliente no encontrado");
+            return NotFound();
         }
     }
 }

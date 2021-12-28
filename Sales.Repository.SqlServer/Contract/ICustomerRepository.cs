@@ -10,7 +10,7 @@ namespace Sales.Repository.Contract
         List<Customer> GetAll();
         Customer GetId(Guid id);
         Guid Create(Customer product);
-        bool Update(Customer product);
+        Customer Update(Customer product);
         bool Delete(Guid id);
     }
 }

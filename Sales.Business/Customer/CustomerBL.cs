@@ -26,14 +26,15 @@ namespace Sales.Business.Customer
         {
             return customerDAL.GetById(id);
         }
-        public Guid CreateCustomer(Object customer)
+        public Guid CreateCustomer(Sales.Entity.Customer.Customer customer)
         {
-            return customerDAL.Create((Sales.Entity.Customer.Customer)customer);
+            return customerDAL.Create(customer);
         }
 
-        public bool UpdateCustomer(Object customer)
+        public Entity.Customer.Customer UpdateCustomer(Entity.Customer.Customer customer)
         {
-            return customerDAL.Update((Sales.Entity.Customer.Customer)customer);
+            Guid id = customerDAL.Update(customer);
+            return GetCustomerById(id);
         }
         public bool DeleteCustomer(Guid id)
         {
